@@ -5,11 +5,12 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/markdown/", // Définit le chemin de base
   build: {
-    outDir: "dist", // Dossier de sortie
-    sourcemap: true, // Générer les fichiers de map
+    outDir: "dist", // Dossier de sortie pour les fichiers buildés
+    sourcemap: true, // Générer les fichiers de map (optionnel)
   },
   server: {
-    port: 3000, // Port pour le dev server
+    port: 3000, // Définit le port pour le serveur local
   },
 });
